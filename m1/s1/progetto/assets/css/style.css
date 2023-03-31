@@ -78,14 +78,12 @@ background-color:#e22d0e;
 text-align: center;
 font-weight: bold ;
 font-size: 2.5rem;
-padding-top: 60px;
 font-family: "montserrat";
 color: rgb(255, 255, 255);
 
 }
 
 .t2 {
-
  font-size: 1.5rem;
 line-height: 3.5rem;
 }
@@ -97,16 +95,11 @@ line-height: 3.5rem;
 
 .ceo {
 font-size: 1.0rem;
-padding-bottom: 40px;
 }
 
 
-.foto1 {
-    
-    
-    margin-right: auto;
-max-width: 100%;
-}
+
+
 
 .immaginer{
     border-radius: 70%;
