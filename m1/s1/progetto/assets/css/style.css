@@ -4,8 +4,16 @@
   @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Poppins&display=swap');
 
   
-main {text-align: center;}
-.sfondologo {
+main {
+text-align: center;
+margin-bottom: 80px;
+}
+
+
+
+.sfondologo 
+
+{
 background-color: black;
 }
 .logo {
@@ -52,7 +60,7 @@ header {
     font-family: "monteserrat", "sans";
 }
 
-.scrittab, .st {
+.scrittab,.st {
 
     text-align: center;
     font-weight: bold ;
@@ -70,14 +78,21 @@ header {
     font-family: "open sans";
     }
 
-    /* qui ho fatto un piccolo casino che  devo rivedere */
-.quadrato,.t2,.t3,.ceo {
+    .immaginer{
+        border-radius: 70%;
+        text-align: center;
+        
+    }
+    
+#quadrato1 {
 background-color:#e22d0e;
 text-align: center;
 font-weight: bold ;
 font-size: 2.5rem;
 font-family: "montserrat";
 color: rgb(255, 255, 255);
+box-sizing: border-box;
+padding: 20px;
 
 }
 
@@ -89,18 +104,21 @@ line-height: 3.5rem;
 .t3{
     font-size: 2.0rem;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .ceo {
 font-size: 1.0rem;
 }
 
+article { box-sizing: border-box ;
 
+padding: 20px;
 
+}
+img {width: 100%;}
 
+.fotopc {
+ border:1px solid gray
 
-.immaginer{
-    border-radius: 70%;
-    text-align: center;
-    
 }
