@@ -28,7 +28,7 @@ REGOLE
 */
 
 
-let nome= "mirko"
+let name = "mirko"
 
 /* ESERCIZIO 3
  Scrivi il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.
@@ -52,7 +52,7 @@ let x = numero1
   Riassegna un nuovo valore alla variabile "name" già esistente: il tuo cognome.
   Dimostra l'impossibilità di riassegnare un valore ad una variabile dichiarata con il costrutto const.
 */
-let name = "iandoni" ;
+ name = "iandoni" ;
 
  console.log(name) ;
 
