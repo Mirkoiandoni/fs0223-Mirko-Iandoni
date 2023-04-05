@@ -136,14 +136,12 @@ console.log(totalShoppingCart);
   
   if (a > b && a > c)
   {
-          if (b>c)
-          {
-              console.log(`La sequenza sarà ${a} ${b} ${c}`);
-          }
-          else
-          {
-              console.log(`La sequenza sarà ${a} ${c} ${b}`);
-          }
+ if (b>c)
+  {
+ console.log(`La sequenza sarà ${a} ${b} ${c}`);
+} else
+{ console.log(`La sequenza sarà ${a} ${c} ${b}`);
+ }
   }
   else if (b > a && b > c)
   {
@@ -225,7 +223,14 @@ else console.log("è un numero dispari");
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-
+let val = 7
+if (val >= 5 && val < 10) {
+    console.log("Meno di 10");
+  } else if (val < 5) {
+    console.log("Meno di 5");
+  } else {
+    console.log("Uguale a 10 o maggiore");
+  }
 
 
 
@@ -239,7 +244,20 @@ const me = {
   skills: ['javascript', 'html', 'css'],
 }
 
+me.city 
+console.log(me);
+
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+
+
+
+
+
+
+
+
+
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
