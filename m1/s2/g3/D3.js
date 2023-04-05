@@ -221,7 +221,7 @@ else console.log("è un numero dispari");
     } else {
       console.log("Uguale a 10 o maggiore");
     }
-*/
+*/ 
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
