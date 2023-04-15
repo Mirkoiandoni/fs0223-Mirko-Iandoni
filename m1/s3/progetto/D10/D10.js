@@ -15,8 +15,6 @@ REGOLE
 
 let sum = 10 + 20;
 
-console.log(sum);
-
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
