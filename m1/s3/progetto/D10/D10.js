@@ -15,13 +15,14 @@ REGOLE
 
 let sum = 10 + 20;
 
+console.log(sum);
+
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
+
 let randomNum = Math.floor(Math.random() * 21);
 console.log(randomNum);
-
-
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
@@ -38,6 +39,7 @@ let me = {
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
+
 
 delete me.age;
 
@@ -81,6 +83,8 @@ console.log(dice());
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+
+
 function whoIsBigger(a, b) {
   if (a > b) {
       return a;
@@ -100,13 +104,10 @@ function splitMe(str) {
   return str.split(" ");
 
 }
-
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
-
-
 function deleteOne(str, boolValue) {
   if (boolValue) {
     return str.substring(1);
@@ -114,31 +115,19 @@ function deleteOne(str, boolValue) {
     return str.substring(0, str.length - 1);
   }
 }
-
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
- Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
+
+  Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
-
-// {function onlyLetters(str) {
-
-// return str.replace(/[0-9]/g, '');
-
-// }
-
-// console.log(onlyLetters("I have 4 dogs"));
-// }
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
-
-
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
-
 function whatDayIsIt() {
   const days = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
   const today = new Date();
@@ -147,8 +136,6 @@ function whatDayIsIt() {
 }
 
 console.log(whatDayIsIt());
-
-
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
   Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
@@ -177,8 +164,6 @@ function rollTheDices(num) {
     values: values
   };
 }
-
-
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
