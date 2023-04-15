@@ -121,6 +121,17 @@ function deleteOne(str, boolValue) {
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
+function onlyLetters(stringa) {
+  let result = "";
+  for (let i = 0; i < stringa.length; i++) {
+    if (!isNaN(stringa[i])) continue;
+    result += stringa[i];
+  }
+  return result;
+}
+
+
+
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
@@ -168,22 +179,75 @@ function rollTheDices(num) {
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
+function howManyDays(date) {
+ 
+  const differenceMs = Date.now() - date.getTime();
+
+  
+  const days = Math.floor(differenceMs / (1000 * 60 * 60 * 24));
+
+
+  return days;
+}
+
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
 
+
+function isTodayMyBirthday() {
+  const today = new Date();
+  const birthDate = new Date("1996-04-11"); 
+  
+  return (today.getDate() === birthDate.getDate() && today.getMonth() === birthDate.getMonth());
+}
+
+console.log(isTodayMyBirthday());
+
 // Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
+
+
+
+
+
 
 /* ESERCIZIO 11
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 
+function deleteProp(obj, prop) {
+  delete obj[prop];
+  return obj;
+}
+
+console.log(deleteProp)
+
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
+
+function newestMovie(movies) {
+  
+  let latestMovie = movies[0];
+
+  
+  for (let i = 1; i < movies.length; i++) {
+  
+    if (Year(movies[i].releaseDate) > Year(latestMovie.releaseDate)) {
+      
+      latestMovie = movies[i];
+    }
+  }
+
+ 
+  return latestMovie;
+
+}
+
+console.log(newestMovie(movies));
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
