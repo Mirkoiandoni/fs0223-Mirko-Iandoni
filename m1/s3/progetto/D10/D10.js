@@ -135,7 +135,11 @@ function onlyLetters(stringa) {
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
-
+function isThisAnEmail(email) {
+  let regexp = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+  let validEmail = regexp.test(email);
+  return validEmail;
+}
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
