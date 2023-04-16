@@ -101,9 +101,10 @@ console.log(whoIsBigger(10, 20));
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 function splitMe(str) {
-  return str.split(" ");
-
+  let splitted = str.split(" ");
+  return splitted;
 }
+console.log(splitMe("I love coding"));
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
@@ -140,6 +141,7 @@ function isThisAnEmail(email) {
   let validEmail = regexp.test(email);
   return validEmail;
 }
+console.log(isThisAnEmail('mirko.96@live.it'));
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
