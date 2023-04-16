@@ -245,9 +245,7 @@ function newestMovie(movies) {
  
   return latestMovie;
 
-}
 
-console.log(newestMovie(movies));
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
