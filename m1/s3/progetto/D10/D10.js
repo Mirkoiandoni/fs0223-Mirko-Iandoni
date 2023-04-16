@@ -136,6 +136,7 @@ function onlyLetters(stringa) {
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
@@ -230,95 +231,228 @@ console.log(deleteProp)
 */
 
 function newestMovie(movies) {
+  let newest = null;
   
-  let latestMovie = movies[0];
-
-  
-  for (let i = 1; i < movies.length; i++) {
-  
-    if (Year(movies[i].releaseDate) > Year(latestMovie.releaseDate)) {
-      
-      latestMovie = movies[i];
+  for (let i = 0; i < movies.length; i++) {
+    const movie = movies[i];
+    
+    if (!newest || movie.year > newest.year) {
+      newest = movie;
     }
   }
-
- 
-  return latestMovie;
-
+  
+  return newest;
+}
 
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 
+function countMovies(movies) {
+  return movies.length;
+}
+
+
+
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
+
+function onlyTheYears(movies) {
+  const years = movies.map(movie => movie.Year);
+  return years;
+}
+
+
+ 
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
+function onlyInLastMillennium() {
+  let vecchiFilm = [];
+  movies.filter(function (p) {
+  if (p.Year < '2000') {
+    vecchiFilm.push(p);
+  }
+  }
+  )
+return vecchiFilm;
+  }
+  
+
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
+function sumAllTheYears() {
+  return movies.reduce (function (p, c) {
+    return p + Number(c.Year);
+  }, 0);
+
+}
+
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+function searchByTitle(str) {
+  let risultato = [];
+  movies.forEach ((p)=> {
+if (p.Title.includes(str)) {
+  risultato.push(p.Title)
+
+}
+  });
+  return risultato;
+}
+
+  
+
+
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
+function searchAndDivide(str) {
+  let big = {
+match:[],
+unmatch:[]
+
+ }
+ movies.forEach ((p)=> {
+
+if (p.Title.includes(str)) {
+  big.match.push(p.Title)
+} else {
+  big.unmatch.push(p.Title)
+}
+ });
+ return big;
+}
+
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+
+function removeIndex(num) {
+  movies.splice(num, 1);
+  return movies;
+}
+
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
+function isContainer() {
+  let container = document.querySelector('#container');
+
+
+
+}
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
+function  selectAllTd() {
+
+  let td= document.querySelectorAll('td');
+ 
+  console.log (td);
+}
+
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+// function stampaTd() {
+//   let allTd = document.querySelectorAll('td');
+//   for (let i of alltd){
+// let contentTd = i.textContent;
+// console.log(contentTd);
+// }
+// }
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
+function backgroundColor() {
+  let allLinks=document.querySelectorAll('a');
+   for (i=0;i<allLinks.length;i++) {
+allLinks[i].style.backgroundColor = "red";
+   }
+  }
+
+  backgroundColor ();
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
-*/
 
+*/
+function addList() {
+  let list= document.querySelector('myList');
+  let nuovalista = document.createElement('li');
+  nuovalista.textContent = 'New list item';
+  list.appendChild(nuovalista);
+}
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+function removeList() {
+  document.querySelector('myList').remove();
+
+}
+
+/* per eliminare solo i <li></li>
+function clearUl() {
+  let unorderedList = document.querySelector('#myList')
+  let liElements = unorderedList.querySelectorAll('li');
+  liElements.forEach(li => li.remove());
+}
+clearUl();
+*/
+
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
+function addClass() {
+  let allTr= document.querySelectorAll('tr');
+  for (let i of allTr) {
+    i.classList.add('test');
+  }
+}
+
+
 // [EXTRA] JS Avanzato
 
-/* ESERCIZIO 27
-  Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
+// ESERCIZIO 27
+//   Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
 
-  Esempio:
-  halfTree(3)
+//   Esempio:
+//   halfTree(3)
 
-  *
-  **
-  ***
+  
 
-*/
+
+
+function halfTree(num) {
+  let sum = '';
+  for (let i = 0; i < num; i++) {
+    sum += '*';
+    console.log(sum);
+  }
+}
+halfTree(10);
+
+
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -452,4 +586,14 @@ const movies = [
     Poster:
       'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg',
   },
+
+
+  
+
 ]
+
+console.log(onlyInLastMillennium());
+console.log(sumAllTheYears());
+console.log(searchByTitle('Lord'))
+console.log(searchAndDivide('Lord'));
+console.log(removeIndex(7));
