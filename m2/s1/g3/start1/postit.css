@@ -1,0 +1,80 @@
+body {
+  font-family: "Indie Flower";
+  height: 500px;
+  background: #888787;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+main {
+  height: 100%;
+}
+.postit1,
+.postit2,
+.postit3,
+.postit4,
+.postit5,
+.postit6,
+.postit7,
+.postit8 {
+  width: 350px;
+  height: 250px;
+  border: 2px solid black;
+  padding: 20px;
+  color: black;
+  position: relative;
+  box-shadow: 7px 7px 15px -4px black;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2em;
+  margin: 25px;
+  float: left;
+}
+h4 {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.postit1 {
+  background-color: #fafbc9;
+  transform: rotate(-9deg);
+}
+
+p {
+  font-size: 25px;
+}
+.postit2 {
+  background-color: #cafacc;
+  transform: rotate(9deg);
+}
+.postit3 {
+  background-color: #c6c6f1;
+  transform: rotate(-9deg);
+}
+.postit4 {
+  background-color: #c9f9cb;
+  transform: rotate(9deg);
+}
+.postit5 {
+  background-color: #fafbc9;
+  transform: rotate(-9deg);
+}
+.postit6 {
+  background-color: #c8c8f6;
+  transform: rotate(9deg);
+}
+.postit7 {
+  background-color: #f5f5c3;
+  transform: rotate(-9deg);
+}
+.postit8 {
+  background-color: #c4f1c6;
+  transform: rotate(9deg);
+}
