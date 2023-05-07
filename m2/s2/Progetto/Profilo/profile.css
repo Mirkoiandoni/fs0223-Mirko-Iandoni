@@ -1,0 +1,104 @@
+body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 0, 0.7);
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: #303030;
+  border-radius: 10px;
+}
+
+nav {
+  background-color: #151515;
+  border-bottom: 2px solid black;
+}
+nav .navbar-brand img {
+  width: 100px;
+}
+nav .nav-item .dropdown-menu li a:focus {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+nav li {
+  cursor: pointer;
+}
+nav li button:focus {
+  border: none;
+}
+nav li .profile-img {
+  width: 40px;
+}
+
+body {
+  color: white;
+  background-color: #151515;
+}
+
+main img {
+  width: 100%;
+}
+main #lang-select option:checked {
+  background-color: rgba(255, 0, 0, 0.6) !important;
+}
+main .custom-txt {
+  color: #a9a9a9;
+  margin: 0;
+}
+main .alt-txt {
+  color: white;
+  margin: 0;
+  font-size: 0.9em;
+}
+main button.custom-bg {
+  background-color: #151515;
+}
+main button.custom-btn {
+  width: -moz-max-content;
+  width: max-content;
+}
+main button.custom-btn:hover {
+  background-color: #303030;
+}
+main .checkbox-container {
+  background-color: #151515;
+}
+main .checkbox-container input {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  background-color: #151515;
+  font: inherit;
+  color: #303030;
+  width: 1.15em;
+  height: 1.15em;
+  border: 2px solid #303030;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+main .checkbox-container input::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  -webkit-clip-path: polygon(
+    14% 44%,
+    0 65%,
+    50% 100%,
+    100% 16%,
+    80% 0%,
+    43% 62%
+  );
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #606060;
+}
+main .checkbox-container input:checked::before {
+  transform: scale(1);
+} /*# sourceMappingURL=profile.css.map */
