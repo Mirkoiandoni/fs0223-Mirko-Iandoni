@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
 import { ITodo } from '../Iterfaces/todos';
-import { addAggiungere } from
 @Injectable({
   providedIn: 'root',
 })
 export class TodosService {
+  getToDo() {
+    throw new Error('Method not implemented.');
+  }
+  updateToDo(element: ITodo) {
+    throw new Error('Method not implemented.');
+  }
   apiJson: string = 'http://localhost:3000/todos';
 
   constructor() {}
@@ -13,8 +18,7 @@ export class TodosService {
     return fetch(this.apiJson).then((response) => response.json());
   }
 
-
-addTodo(todo: ITodo): Promise<ITodo> {
+  addTodo(todo: ITodo): Promise<ITodo> {
     return fetch(this.apiJson, {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
@@ -28,7 +32,6 @@ addTodo(todo: ITodo): Promise<ITodo> {
     }).then((response) => response.json());
   }
 
-
   changeStatus(id: number) {
     const thisUrl = `${this.apiJson}/${id}`;
     const data = { completed: true };
@@ -40,8 +43,4 @@ addTodo(todo: ITodo): Promise<ITodo> {
       body: JSON.stringify(data),
     }).then((res) => res.json);
   }
-  }
-
-
-
-
+}
