@@ -9,6 +9,7 @@ import {
   Observable,
   ObservableInput,
   tap,
+  throwError,
 } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 import { HttpClient } from '@angular/common/http';
@@ -80,5 +81,25 @@ export class AuthService {
     this.authLogoutTimer = setTimeout(() => {
       this.logout();
     }, expMs);
+  }
+
+  errors(err: any) {
+    switch (err.error) {
+      case 'Email and Password are required':
+        return throwError('Email e password obbligatorie');
+        break;
+      case 'Email already exists':
+        return throwError('Utente esistente');
+        break;
+      case 'Email format is invalid':
+        return throwError('Email scritta male');
+        break;
+      case 'Cannot find user':
+        return throwError('utente inesistente');
+        break;
+      default:
+        return throwError('Errore');
+        break;
+    }
   }
 }
